@@ -10,4 +10,10 @@
 
 @implementation Splunker
 
+- (instancetype)init {
+    self = [super init];
+    self.cave = [[Cave alloc] init];
+    return self;
+}
+
 @end
