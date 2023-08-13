@@ -10,7 +10,7 @@
 
 @implementation Cave
 
-- (instancetype)init {
+- (id)init {
     self = [super init];
     return self;
 }

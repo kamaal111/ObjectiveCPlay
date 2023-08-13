@@ -15,6 +15,8 @@
 
 @property Cave *cave;
 
+- (id)init: (Cave *)cave;
+
 @end
 
 #endif /* Splunker_h */

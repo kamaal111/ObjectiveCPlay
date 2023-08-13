@@ -12,6 +12,8 @@
 
 @interface Cave : NSObject
 
+- (id)init;
+
 @end
 
 #endif /* Cave_h */

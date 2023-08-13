@@ -9,17 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-        .onAppear(perform: {
-            let splunker = Splunker()
-            print(splunker.cave)
-        })
+        Text("Some splunking")
+            .padding()
+            .onAppear(perform: splunk)
+    }
+
+    private func splunk() {
+        let cave = Cave()
+        let splunker = Splunker(cave)
+        print(splunker?.cave == cave)
     }
 }
 
