@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C3D17F92A88F22C0037520B /* Splunker.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D17F82A88F22C0037520B /* Splunker.m */; };
+		2C3D17FB2A88F2FF0037520B /* Cave.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C3D17FA2A88F2FF0037520B /* Cave.m */; };
 		2CAA03462A88F0CF0065D2AE /* ObjectiveCPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA03452A88F0CF0065D2AE /* ObjectiveCPlayApp.swift */; };
 		2CAA03482A88F0CF0065D2AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAA03472A88F0CF0065D2AE /* ContentView.swift */; };
 		2CAA034A2A88F0D00065D2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CAA03492A88F0D00065D2AE /* Assets.xcassets */; };
@@ -14,6 +16,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C3D17F72A88F22B0037520B /* ObjectiveCPlay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ObjectiveCPlay-Bridging-Header.h"; sourceTree = "<group>"; };
+		2C3D17F82A88F22C0037520B /* Splunker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Splunker.m; sourceTree = "<group>"; };
+		2C3D17FA2A88F2FF0037520B /* Cave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Cave.m; sourceTree = "<group>"; };
+		2C3D17FC2A88F6100037520B /* Cave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cave.h; sourceTree = "<group>"; };
+		2C3D17FD2A88F7040037520B /* Splunker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Splunker.h; sourceTree = "<group>"; };
 		2CAA03422A88F0CF0065D2AE /* ObjectiveCPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObjectiveCPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CAA03452A88F0CF0065D2AE /* ObjectiveCPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectiveCPlayApp.swift; sourceTree = "<group>"; };
 		2CAA03472A88F0CF0065D2AE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,10 +59,15 @@
 		2CAA03442A88F0CF0065D2AE /* ObjectiveCPlay */ = {
 			isa = PBXGroup;
 			children = (
-				2CAA03452A88F0CF0065D2AE /* ObjectiveCPlayApp.swift */,
-				2CAA03472A88F0CF0065D2AE /* ContentView.swift */,
-				2CAA03492A88F0D00065D2AE /* Assets.xcassets */,
 				2CAA034E2A88F0D00065D2AE /* ObjectiveCPlay.entitlements */,
+				2C3D17FC2A88F6100037520B /* Cave.h */,
+				2C3D17F72A88F22B0037520B /* ObjectiveCPlay-Bridging-Header.h */,
+				2C3D17FD2A88F7040037520B /* Splunker.h */,
+				2C3D17FA2A88F2FF0037520B /* Cave.m */,
+				2C3D17F82A88F22C0037520B /* Splunker.m */,
+				2CAA03472A88F0CF0065D2AE /* ContentView.swift */,
+				2CAA03452A88F0CF0065D2AE /* ObjectiveCPlayApp.swift */,
+				2CAA03492A88F0D00065D2AE /* Assets.xcassets */,
 				2CAA034B2A88F0D00065D2AE /* Preview Content */,
 			);
 			path = ObjectiveCPlay;
@@ -97,10 +109,11 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					2CAA03412A88F0CF0065D2AE = {
 						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1500;
 					};
 				};
 			};
@@ -139,6 +152,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C3D17FB2A88F2FF0037520B /* Cave.m in Sources */,
+				2C3D17F92A88F22C0037520B /* Splunker.m in Sources */,
 				2CAA03482A88F0CF0065D2AE /* ContentView.swift in Sources */,
 				2CAA03462A88F0CF0065D2AE /* ObjectiveCPlayApp.swift in Sources */,
 			);
@@ -180,9 +195,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -240,9 +257,11 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -265,10 +284,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ObjectiveCPlay/ObjectiveCPlay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectiveCPlay/Preview Content\"";
 				DEVELOPMENT_TEAM = DXUKH9VF73;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -283,6 +304,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.ObjectiveCPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCPlay/ObjectiveCPlay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -292,10 +315,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ObjectiveCPlay/ObjectiveCPlay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ObjectiveCPlay/Preview Content\"";
 				DEVELOPMENT_TEAM = DXUKH9VF73;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -310,6 +335,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.kamaal.ObjectiveCPlay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "ObjectiveCPlay/ObjectiveCPlay-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

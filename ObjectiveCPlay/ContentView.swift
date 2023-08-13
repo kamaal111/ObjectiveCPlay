@@ -16,6 +16,10 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onAppear(perform: {
+            let splunker = Splunker()
+            print(splunker.cave)
+        })
     }
 }
 
